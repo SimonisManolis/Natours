@@ -1,0 +1,88 @@
+.popup{
+   // background-color: orange;
+    background-color: rgba($color-black, .8);
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 5000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+   
+    &__content{
+        display: table;
+        width: 80%;
+        //height: 70%;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(0.3);
+        visibility: hidden;
+        opacity: 0;
+        transition: all .4s .2s;
+    }
+
+    &__left{
+        display: table-cell;
+        width: 33.3333333%;
+    }
+
+    &__right{
+        display: table-cell;
+        vertical-align: middle;
+        width: 66.6666667%;
+        padding: 2rem 5rem;
+        
+    }
+
+    &__img{
+        display: block;
+        width: 100%;
+    }
+
+    &__text{
+        font-size: 1.4rem;
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule: .1rem solid $color-grey-light-1;
+        -webkit-hyphens:auto;
+        hyphens:auto;
+
+    }
+
+    &:target {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &:target &__content{
+        visibility: visible;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    
+
+    &__exit{
+
+        &:link,
+        &:visited{
+            font-size: 3rem;
+            display: inline-block;
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            color: $color-grey-dark-3;
+            text-decoration: none;
+            transition: all .2s;
+        }
+        
+
+        &:hover{
+            color: $color-primary;
+        }
+    }
+}
