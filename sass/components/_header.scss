@@ -4,8 +4,12 @@
     background-size: cover; /*always fit to the box.*/
     background-position: top; /*crops from bootom */
     height: 95vh;
-    clip-path: polygon(0 0 , 100% 0 , 100% 85%, 0 100%);
+    clip-path: polygon(0 0 , 100% 0 , 100% 80vh, 0 100%);
     position: relative;
+
+    @include response(phone){
+        clip-path: polygon(0 0 , 100% 0 , 100% 85vh, 0 100%);
+    }
 
     &__logo-box{
         position: absolute;

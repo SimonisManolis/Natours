@@ -7,7 +7,24 @@
 }
 
 html {
+
+    @include response(big-desktop){
+        font-size: 75%; //1rem = 12px
+    }
+
     font-size: 62.5%;
+
+    @include response(tab-land){
+        font-size: 56.25%; //1rem = 9px
+    }
+
+    @include response(tab-port){
+        font-size: 50%; //1rem = 8px
+    }
+
+    @include response(phone){
+        font-size: 43%; //1rem = 7px
+    }
 }
 
 body {
@@ -17,4 +34,8 @@ body {
     line-height: 1.7;
     //color: white;
     box-sizing: border-box;
+
+    @include response(tab-port){
+        padding: 0;
+    }
 }

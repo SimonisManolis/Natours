@@ -17,6 +17,16 @@
         box-shadow: 0 1rem 2rem rgba($color-black, .2);
         text-align: center;
 
+        @include response(tab-port){
+            top: 4rem;
+            right: 4rem;
+        }
+
+        @include response(phone){
+            top: 3rem;
+            right: 3rem;
+        }
+
     }
 
     &__background{
@@ -30,6 +40,16 @@
         right: 6.5rem;
         z-index: 100;
         transition: all .8s cubic-bezier(0.86, 0, 0.007, 1);
+
+        @include response(tab-port){
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+
+        @include response(phone){
+            top: 3.5rem;
+            right: 3.5rem;
+        }
 
     
     }

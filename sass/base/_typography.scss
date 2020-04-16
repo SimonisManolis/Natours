@@ -9,6 +9,10 @@
         font-weight: 400;
         letter-spacing: 3.5rem;
         animation: moveInRight 1s ease-out;
+
+        @include response(phone){
+            letter-spacing: 2rem;
+        }
     }
     
     &--sub{
@@ -17,6 +21,10 @@
         font-weight: 900;
         letter-spacing: 1.75rem;
         animation: moveInLeft 1s ease-out;
+
+        @include response(phone){
+            letter-spacing: 1rem;
+        }
     }
     
 
@@ -34,10 +42,22 @@
     transition: all .2s;
     text-transform: uppercase;
 
+    @include response(tab-port){
+        font-size: 3rem;
+    }
+
+    @include response(phone){
+        font-size: 2.5rem;
+    }
+
     &:hover{
         transform: skewX(20deg) skewY(2deg) scale(1.1);
         
         text-shadow: .5rem 1rem 2rem rgba($color-black, .4);
+
+        @include response(phone){
+            transform: none;
+        }
     }
 
 }
